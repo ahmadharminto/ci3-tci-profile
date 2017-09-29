@@ -54,5 +54,8 @@ $route['default_controller'] = 'home';
 $route['page/(:any)'] = 'frontend/$1';
 $route['page/([a-zA-Z]+)/(:any)'] = 'frontend/$1/$2';
 
+$route['administrator/(:any)'] = 'backend/$1';
+$route['administrator/([a-zA-Z]+)/(:any)'] = 'backend/$1/$2';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

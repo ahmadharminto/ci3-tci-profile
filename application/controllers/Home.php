@@ -20,6 +20,11 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		redirect('page/home');
+    }
+
+    public function timestamp()
+    {
+        echo date('YmdHis');
     }
 }
