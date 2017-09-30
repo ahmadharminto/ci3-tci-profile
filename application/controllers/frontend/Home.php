@@ -20,11 +20,6 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
-	}
-
-	public function test($id=1)
-	{
-		echo $id;
+		$this->load->view('frontend/template/master');
 	}
 }

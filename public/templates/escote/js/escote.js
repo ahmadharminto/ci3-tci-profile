@@ -100,9 +100,11 @@
         $(window).trigger("scroll");
         $(window).trigger("resize");
         
+        var window_location_hash = $(window.location.hash);
+
         // Hash Forwarding
-        if (window.location.hash){
-            var hash_offset = $(window.location.hash).offset().top;
+        if (window_location_hash.length){
+            var hash_offset = window_location_hash.offset().top;
             $("html, body").animate({
                 scrollTop: hash_offset
             });
@@ -1006,6 +1008,7 @@
     /* ---------------------------------------------------------------------- */
     function escope_twittie() {
         $('.twitter-feed').twittie({
+            apiPath: BASE_URL + 'public/templates/escote/api/tweet.php',
             username: 'Envato',
             dateFormat: '%b. %d, %Y',
             template: '{{tweet}} <div class="date">{{date}}</div>',
