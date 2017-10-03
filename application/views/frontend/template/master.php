@@ -13,7 +13,7 @@
                             <img src="<?=base_url('public/images/slider/slide1.jpg');?>" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption esc_white_thin_80 lft tp-resizeme"
-                                    data-x="530"
+                                    data-x="330"
                                     data-y="300" 
                                     data-speed="500" 
                                     data-start="500" 
@@ -26,7 +26,7 @@
                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">Welcome To</div>                        
                             <!-- LAYER NR. 2 -->
                             <div class="tp-caption esc_colored_heavy_80 skewfromleft tp-resizeme"
-                                    data-x="360"
+                                    data-x="260"
                                     data-y="400"
                                     data-speed="800"
                                     data-start="1200"
@@ -39,7 +39,7 @@
                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">PT Trust Certified</div>                        
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption esc_white_thin_80 skewfromleft tp-resizeme"
-                                    data-x="660"
+                                    data-x="460"
                                     data-y="500" 
                                     data-speed="800" 
                                     data-start="800" 
@@ -111,7 +111,7 @@
                             <img src="<?=base_url('public/images/slider/slide4.jpg');?>" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption esc_white_thin_80 lft tp-resizeme"
-                                    data-x="530"
+                                    data-x="330"
                                     data-y="300" 
                                     data-speed="500" 
                                     data-start="500" 
@@ -124,7 +124,7 @@
                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">Integrity</div>
                             <!-- LAYER NR. 2 -->
                             <div class="tp-caption esc_white_heavy_80 skewfromleft tp-resizeme"
-                                    data-x="630"
+                                    data-x="500"
                                     data-y="400"
                                     data-speed="800"
                                     data-start="1200"
@@ -137,7 +137,7 @@
                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">Professional</div>
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption esc_colored_heavy_80 skewfromleft tp-resizeme"
-                                    data-x="360"
+                                    data-x="260"
                                     data-y="500" 
                                     data-speed="800" 
                                     data-start="800" 
@@ -155,7 +155,7 @@
                             <img src="<?=base_url('public/images/slider/slide3.jpg');?>" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption esc_white_heavy_80 lft tp-resizeme"
-                                    data-x="430"
+                                    data-x="230"
                                     data-y="300" 
                                     data-speed="500" 
                                     data-start="500" 
@@ -214,7 +214,7 @@
     </section>
 
     <!-- Section: About -->
-    <section id="about">
+    <section id="about" class="section-dark-blue">
         <div class="container">
             <div class="section-title">
                 <div class="row">
@@ -295,21 +295,21 @@
         <div class="container pt-100 pb-100">
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-4">
-                    <div class="funfact style2"> 
+                    <div class="funfact"> 
                         <i class="pe-7s-stopwatch text-white"></i>
                         <h2 class="animate-number text-white" data-value="12" data-animation-duration="1500">0</h2>
                         <span>Years of Experience</span> 
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4">
-                    <div class="funfact style2"> 
+                    <div class="funfact"> 
                         <i class="pe-7s-portfolio text-white"></i>
                         <h2 class="animate-number text-white" data-value="1430" data-animation-duration="4000">0</h2>
                         <span>Projects Completed</span> 
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4">
-                    <div class="funfact style2"> 
+                    <div class="funfact"> 
                         <i class="pe-7s-smile text-white"></i>
                         <h2 class="animate-number text-white" data-value="146" data-animation-duration="3000">0</h2>
                         <span>Happy Clients</span> 
@@ -320,7 +320,7 @@
     </section>
 
     <!-- Section: Services -->
-    <section id="services">
+    <section id="services" class="section-dark-blue">
         <div class="container">
             <div class="section-title">
                 <div class="row">
@@ -375,7 +375,7 @@
     </section>
 
      <!-- Section: Working Areas -->
-     <section id="working-areas">
+     <section id="working-areas" class="section-dark-blue">
         <div class="container">
             <div class="section-title">
                 <div class="row">

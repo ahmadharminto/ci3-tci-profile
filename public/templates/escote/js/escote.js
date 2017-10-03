@@ -188,7 +188,8 @@
     //Active Menu Item on Reaching Different Sections
     var sections = $('section'),
         nav = $('header'),
-        nav_height = nav.outerHeight();
+        nav_height = nav.outerHeight(),
+        footer = $('footer');
 
     function escope_activate_menuitem() {
         var cur_pos = $(window).scrollTop() + 2;
@@ -199,11 +200,23 @@
             if (cur_pos >= top && cur_pos <= bottom) {
                 nav.find('a').removeClass('current').removeClass('active');
                 sections.removeClass('current').removeClass('active');
+                footer.removeClass('current').removeClass('active');
 
                 $(this).addClass('current').addClass('active');
                 nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('current').addClass('active');
             }
         });
+
+        var top_footer = footer.offset().top - nav_height - 180,
+            bottom_footer = top_footer + footer.outerHeight();
+
+        if (cur_pos >= top_footer && cur_pos <= bottom_footer) {
+            nav.find('a').removeClass('current').removeClass('active');
+            sections.removeClass('current').removeClass('active');            
+
+            footer.addClass('current').addClass('active');
+            nav.find('a[href="#' + footer.attr('id') + '"]').addClass('current').addClass('active');
+        }
     }
 
 
@@ -1009,7 +1022,7 @@
     function escope_twittie() {
         $('.twitter-feed').twittie({
             apiPath: BASE_URL + 'public/templates/escote/api/tweet.php',
-            username: 'ahmadharminto',
+            username: 'TechinAsia_ID',
             dateFormat: '%b. %d, %Y',
             template: '{{tweet}} <div class="date">{{date}}</div>',
             count: 5,

@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to trustcertified.co.id!</h1>
 
 	<div id="body">
-		<p>UnderConstruction!.</p>
+		<p>Coming Soon !</p>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds.</p>

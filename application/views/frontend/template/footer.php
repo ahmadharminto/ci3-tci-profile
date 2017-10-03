@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-sm-6 col-md-6">
                     <div class="footer-widget">
-                        <img height="35" src="<?=base_url('public/images/logo.png');?>" alt="">
+                        <img height="35" src="<?=base_url('public/images/logo.png');?>" alt="" style="max-height:75px; max-width:250px;">
                         <p class="mt-20 mb-20">PT Trust Certified International</p>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
         <div class="container-fluid bg-solid-color bg-dark p-20">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <p class="font-14 m-0" style="color:white">Copyright ©<?=date('Y');?> trustcertified. All Rights Reserved</p>
+                    <p class="font-14 m-0">Copyright ©<?=date('Y');?> trustcertified. All Rights Reserved</p>
                 </div>
             </div>
         </div>

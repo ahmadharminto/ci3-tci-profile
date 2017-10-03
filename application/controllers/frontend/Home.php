@@ -20,6 +20,12 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('frontend/template/master');
+		if ($this->config->item('under_maintenance')) {
+			$this->load->view('welcome_message');
+		} 
+		else {
+			$this->load->view('frontend/template/master');
+		}
+		
 	}
 }

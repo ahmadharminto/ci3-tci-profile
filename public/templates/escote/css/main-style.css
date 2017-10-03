@@ -1066,7 +1066,8 @@ section > .container, section > .container-fluid {
 }
 .bg-dark {
 	/*background-color: #222 !important;*/
-	background-color: #4149b2 !important;
+	/*background-color: #4149b2 !important;*/
+	background-color: #e4ff00 !important;
 }
 .bg-dark-light {
 	background-color: #333 !important;
@@ -3166,7 +3167,7 @@ label {
 	padding-top: 15px;
 }
 .header .navbar-brand > img {
-	max-height: 30px;
+	max-height: 50px;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -3196,37 +3197,45 @@ label {
 }
 .header .navbar-dark, .header .navbar-dark.animated-active {
 	/*background-color: rgba(17, 17, 17, 0.95);*/
-	background-color: rgba(65, 73, 178, 0.95);
+	/*background-color: rgba(65, 73, 178, 0.95);*/
+	background-color: rgba(228, 255, 0, 0.95);
 	border: none;
 }
 .header .navbar-dark li a, .header .navbar-dark li i {
-	color: #ddd !important;
+	/*color: #ddd !important;*/
+	color: #2a2b27 !important;
 }
 .header .navbar-dark .navbar-nav > li > a:hover, .header .navbar-dark .navbar-nav > li > a:focus, .header .navbar-dark .navbar-nav > li > a.active {
-	color: #fff !important;
+	/*color: #fff !important;*/
+	color: #444911 !important;
 }
 .header .navbar-dark .navbar-nav li .badge {
 	background-color: rgba(255, 255, 255, 0.5) !important;
 }
 .header .navbar-dark .dropdown-menu {
-	background-color: rgba(17, 17, 17, 1);
+	/*background-color: rgba(17, 17, 17, 1);*/
+	background-color: rgba(228, 255, 0, 0.95);
 }
 .header .navbar-dark .dropdown ul li a:hover {
 	background-color: rgba(255, 255, 255, 1) !important;
 	color: #111 !important;
 }
 .header .navbar-dark .dropdown-menu {
-	border-color: #111;
+	/*border-color: #111;*/
+	border-color: #b6b7a8;
 }
 @media only screen and (max-width : 991px) {
 .header .navbar-dark .navbar-collapse .navbar-nav li a {
-	border-bottom: 1px solid #222;
+	/*border-bottom: 1px solid #222;*/
+	border-bottom: none;
 }
 .header .navbar-dark .navbar-nav {
-	background: none repeat scroll 0 0 #111;
+	/*background: none repeat scroll 0 0 #111;*/
+	background-color: rgba(228, 255, 0, 0.95);
 }
 .header .navbar-dark li a:hover, .header .navbar-dark li.dropdown.open > a {
-	background-color: rgba(136, 136, 136, 0.4);
+	/*background-color: rgba(136, 136, 136, 0.4);*/
+	/*background-color: rgba(228, 255, 0, 0.95);*/
 	border-bottom-color: #777;
 }
 }
@@ -3236,7 +3245,8 @@ label {
 }
 /* navbar-transparent */
 .header .navbar-transparent {
-	background: none repeat scroll 0 0 transparent;
+	/*background: none repeat scroll 0 0 transparent;*/
+	background-color: rgba(228, 255, 0, 0.75);
 	border: none;
 	box-shadow: none;
 }

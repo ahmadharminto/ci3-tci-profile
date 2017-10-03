@@ -16,6 +16,7 @@
                                     <li><a href="#about" aria-haspopup="true" role="button" aria-expanded="false">About</a></li>
                                     <li><a href="#services" aria-haspopup="true" role="button" aria-expanded="false">Services</a></li>
                                     <li><a href="#working-areas" aria-haspopup="true" role="button" aria-expanded="false">Working Areas</a></li>
+                                    <li><a href="#footer" aria-haspopup="true" role="button" aria-expanded="false">Contact</a></li>
                                     <?php /* 
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Pages <i class="fa fa-angle-down caret"></i></a>
@@ -52,7 +53,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="#" data-toggle="collapse" data-target="#top-search-bar" id="top-search-toggle"><i class="fa fa-search"></i></a></li>
-                                     */ ?>
+                                    */ ?>
                                 </ul>
                             </div>
                         </div>
