@@ -848,7 +848,7 @@ section > .container, section > .container-fluid {
  * -----------------------------------------------
 */
 .divider, .parallax {
-	background-image: url(../http://placehold.it/1920x1280); /* default image */
+	background-image: url(../../../images/slider/slide3.jpg); /* default image */
 	background-repeat: repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -928,106 +928,106 @@ section > .container, section > .container-fluid {
  * -----------------------------------------------
 */
 .bg1 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg2 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg3 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg4 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg5 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg6 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg7 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg8 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg9 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg10 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg11 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg12 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg13 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg14 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg15 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg16 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg17 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg18 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg19 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg20 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg21 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg22 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg23 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg24 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg25 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg26 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg27 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg28 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg29 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg30 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg31 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg32 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg33 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg34 {
-	background-image: url(../http://placehold.it/1920x1280);
+	background-image: url(../../../images/slider/slide3.jpg);
 }
 .bg-img-fixed {
 	background-attachment: fixed;
@@ -1065,7 +1065,8 @@ section > .container, section > .container-fluid {
 	background-color: #111 !important;
 }
 .bg-dark {
-	background-color: #222 !important;
+	/*background-color: #222 !important;*/
+	background-color: #4149b2 !important;
 }
 .bg-dark-light {
 	background-color: #333 !important;
@@ -3194,7 +3195,8 @@ label {
 	background-color: #fff;
 }
 .header .navbar-dark, .header .navbar-dark.animated-active {
-	background-color: rgba(17, 17, 17, 0.95);
+	/*background-color: rgba(17, 17, 17, 0.95);*/
+	background-color: rgba(65, 73, 178, 0.95);
 	border: none;
 }
 .header .navbar-dark li a, .header .navbar-dark li i {

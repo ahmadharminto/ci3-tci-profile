@@ -29,7 +29,7 @@
         <div class="container-fluid bg-solid-color bg-dark p-20">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <p class="font-14 m-0">Copyright ©<?=date('Y');?> trustcertified. All Rights Reserved</p>
+                    <p class="font-14 m-0" style="color:white">Copyright ©<?=date('Y');?> trustcertified. All Rights Reserved</p>
                 </div>
             </div>
         </div>

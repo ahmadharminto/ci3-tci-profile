@@ -10,7 +10,7 @@
                     <ul>
                         <!-- SLIDE 1 -->
                         <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-thumb="http://placehold.it/1920x1280" data-saveperformance="off" data-title="Quick Results"> 
-                            <img src="http://placehold.it/1920x1280" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                            <img src="<?=base_url('public/images/slider/slide1.jpg');?>" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption esc_white_thin_80 lft tp-resizeme"
                                     data-x="530"
@@ -76,6 +76,7 @@
                                     data-endelementdelay="0.1"
                                     data-endspeed="300"
                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">You will be very satisfied using our services.</div>
+                            <?php /*
                             <!-- LAYER NR. 5 -->
                             <div class="tp-caption lfb tp-resizeme"
                                     data-x="530"
@@ -103,10 +104,11 @@
                                     data-endelementdelay="0.1" 
                                     data-endspeed="300"
                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><a class="btn btn-default btn-rounded btn-white" href="#contact">Contact Us</a></div>
+                            */ ?>
                         </li>
                         <!-- SLIDE 2 -->
                         <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-thumb="http://placehold.it/1920x1280" data-saveperformance="off" data-title="Quick Results">
-                            <img src="http://placehold.it/1920x1280" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                            <img src="<?=base_url('public/images/slider/slide4.jpg');?>" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption esc_white_thin_80 lft tp-resizeme"
                                     data-x="530"
@@ -150,7 +152,7 @@
                         </li>
                         <!-- SLIDE 3 -->
                         <li data-transition="random" data-slotamount="7" data-masterspeed="300" data-thumb="http://placehold.it/1920x1280" data-saveperformance="off" data-title="Quick Results">
-                            <img src="http://placehold.it/1920x1280" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                            <img src="<?=base_url('public/images/slider/slide3.jpg');?>" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption esc_white_heavy_80 lft tp-resizeme"
                                     data-x="430"
@@ -163,9 +165,9 @@
                                     data-elementdelay="0.1" 
                                     data-endelementdelay="0.1" 
                                     data-endspeed="300" 
-                                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">Low Risk!</div>
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">Excellent Services</div>
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption esc_white_heavy_80 skewfromleft tp-resizeme"
+                            <div class="tp-caption esc_white_thin_80 skewfromleft tp-resizeme"
                                     data-x="530"
                                     data-y="400"
                                     data-speed="800"
@@ -176,7 +178,33 @@
                                     data-elementdelay="0.1"
                                     data-endelementdelay="0.1"
                                     data-endspeed="300"
-                                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">High Quality</div>
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">With</div>
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption esc_colored_heavy_80 lft tp-resizeme"
+                                    data-x="230"
+                                    data-y="500" 
+                                    data-speed="500" 
+                                    data-start="500" 
+                                    data-easing="Power3.easeInOut" 
+                                    data-splitin="none" 
+                                    data-splitout="none" 
+                                    data-elementdelay="0.1" 
+                                    data-endelementdelay="0.1" 
+                                    data-endspeed="300" 
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">High Professional</div>
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption esc_colored_heavy_80 lft tp-resizeme"
+                                    data-x="450"
+                                    data-y="600" 
+                                    data-speed="500" 
+                                    data-start="500" 
+                                    data-easing="Power3.easeInOut" 
+                                    data-splitin="none" 
+                                    data-splitout="none" 
+                                    data-elementdelay="0.1" 
+                                    data-endelementdelay="0.1" 
+                                    data-endspeed="300" 
+                                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">Performance!</div>
                         </li>
                     </ul>
                     <div class="tp-bannertimer"></div>
@@ -250,7 +278,7 @@
                                             <li>Accountability, namely the principles of clarity of function, implementation and accoun`tability of the organization that allows the management of the company can be implemented effectively.</li>
                                             <li>Accountability, namely the principle of conformity in the management of the company to the legislation in force and the principles of healthy corporate</li>
                                             <li>Independence, namely the principles of corporate management in a professional manner without any conflict of interest and influence or pressure from any party that does not comply with the legislation in force and the principles of healthy corporate.</li>
-                                            <li>Fairness, namely the principle of fair treatment and equal in rights stakeholdersberdasarkan meet the rules and regulations applicable legislation.</li>
+                                            <li>Fairness, namely the principle of fair treatment and equal in rights stakeholders based on meet the rules and regulations applicable legislation.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -266,32 +294,25 @@
     <section class="divider bg16 parallax layer-overlay overlay-dark">
         <div class="container pt-100 pb-100">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="funfact style2"> 
                         <i class="pe-7s-stopwatch text-white"></i>
                         <h2 class="animate-number text-white" data-value="12" data-animation-duration="1500">0</h2>
                         <span>Years of Experience</span> 
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="funfact style2"> 
                         <i class="pe-7s-portfolio text-white"></i>
                         <h2 class="animate-number text-white" data-value="1430" data-animation-duration="4000">0</h2>
                         <span>Projects Completed</span> 
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="funfact style2"> 
                         <i class="pe-7s-smile text-white"></i>
-                        <h2 class="animate-number text-white" data-value="146" data-animation-duration="5500">0</h2>
+                        <h2 class="animate-number text-white" data-value="146" data-animation-duration="3000">0</h2>
                         <span>Happy Clients</span> 
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="funfact style2 no-border"> 
-                        <i class="pe-7s-coffee text-white"></i>
-                        <h2 class="animate-number text-white" data-value="8572" data-animation-duration="4500">0</h2>
-                        <span>Cup of Coffee</span> 
                     </div>
                 </div>
             </div>

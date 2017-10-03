@@ -1009,10 +1009,10 @@
     function escope_twittie() {
         $('.twitter-feed').twittie({
             apiPath: BASE_URL + 'public/templates/escote/api/tweet.php',
-            username: 'Envato',
+            username: 'ahmadharminto',
             dateFormat: '%b. %d, %Y',
             template: '{{tweet}} <div class="date">{{date}}</div>',
-            count: 3,
+            count: 5,
             loadingText: 'Loading!'
         }, function() {
             $(".twitter-carousel ul").owlCarousel({

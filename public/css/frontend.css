@@ -1,5 +1,10 @@
 div.list-item > ul, ol {
     list-style: circle;
     margin: 0;
-	padding: 20px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+div.list-item > ol, ul > li:not(:last-child) {
+    margin-bottom: 10px;
 }
