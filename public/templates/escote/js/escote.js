@@ -207,8 +207,14 @@
             }
         });
 
-        var top_footer = footer.offset().top - nav_height - 180,
+        var top_footer = footer.offset().top - nav_height - 500,
             bottom_footer = top_footer + footer.outerHeight();
+
+            /*
+            console.log('tf:' + top_footer);
+            console.log('c:' + cur_pos);
+            console.log('bf:' + bottom_footer);
+            */
 
         if (cur_pos >= top_footer && cur_pos <= bottom_footer) {
             nav.find('a').removeClass('current').removeClass('active');

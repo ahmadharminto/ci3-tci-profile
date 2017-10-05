@@ -3167,7 +3167,7 @@ label {
 	padding-top: 15px;
 }
 .header .navbar-brand > img {
-	max-height: 50px;
+	max-height: 35px;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;

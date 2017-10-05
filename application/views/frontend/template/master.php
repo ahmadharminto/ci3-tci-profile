@@ -227,7 +227,7 @@
             </div>
             <div class="section-content">
                 <div class="row">
-                    <div class="col-md-5 text-center"><img src="<?=base_url('public/images/upload/about.png');?>" alt=""></div>
+                    <div class="col-md-5 text-center"><img src="<?=base_url('public/images/upload/about.jpg');?>" alt=""></div>
                     <div class="col-md-7 pl-30">
                         <p class="lead">
                             TCI (Trust Certified International) was founded because we want to help you to do services in the field of inspection, testing, certification, consulting and training with labor support professional and competent in any area, especially in Indonesia.

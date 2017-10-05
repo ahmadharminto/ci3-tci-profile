@@ -29,7 +29,7 @@
         <div class="container-fluid bg-solid-color bg-dark p-20">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <p class="font-14 m-0">Copyright ©<?=date('Y');?> trustcertified. All Rights Reserved</p>
+                    <p class="font-14 m-0">Copyright ©<?=date('Y');?> TCI. All Rights Reserved</p>
                 </div>
             </div>
         </div>
@@ -45,7 +45,14 @@
     <script src="<?=base_url('public/templates/escote/js/revolution-slider/js/jquery.themepunch.tools.min.js');?>"></script>
     <script src="<?=base_url('public/templates/escote/js/revolution-slider/js/jquery.themepunch.revolution.min.js');?>"></script>
     <script src="<?=base_url('public/templates/escote/js/custom-revslider.js');?>"></script>
+    <script src="<?=base_url('public/plugins/jquery.matchHeight-min.js');?>"></script>
     <script src="<?=base_url('public/templates/escote/js/escote.js');?>"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.icon-box').matchHeight();
+        });
+    </script>
 
 </body>
 </html>
