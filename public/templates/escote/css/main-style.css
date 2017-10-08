@@ -848,7 +848,7 @@ section > .container, section > .container-fluid {
  * -----------------------------------------------
 */
 .divider, .parallax {
-	background-image: url(../../../images/slider/slide3.jpg); /* default image */
+	background-image: url(../../../images/slider/slide5.jpg); /* default image */
 	background-repeat: repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -928,106 +928,106 @@ section > .container, section > .container-fluid {
  * -----------------------------------------------
 */
 .bg1 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg2 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg3 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg4 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg5 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg6 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg7 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg8 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg9 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg10 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg11 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg12 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg13 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg14 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg15 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg16 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg17 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg18 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg19 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg20 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg21 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg22 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg23 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg24 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg25 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg26 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg27 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg28 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg29 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg30 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg31 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg32 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg33 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg34 {
-	background-image: url(../../../images/slider/slide3.jpg);
+	background-image: url(../../../images/slider/slide5.jpg);
 }
 .bg-img-fixed {
 	background-attachment: fixed;
@@ -3176,8 +3176,10 @@ label {
 	display: none;
 }
 .header .navbar-animated {
+	/*
 	padding-bottom: 15px;
 	padding-top: 15px;
+	*/
 }
 .header .navbar-animated.animated-active {
 	padding-bottom: 0;
@@ -3214,7 +3216,8 @@ label {
 }
 .header .navbar-dark .dropdown-menu {
 	/*background-color: rgba(17, 17, 17, 1);*/
-	background-color: rgba(228, 255, 0, 0.95);
+	/*background-color: rgba(228, 255, 0, 0.95);*/
+	background-color: rgba(255, 255, 255, 0.85);
 }
 .header .navbar-dark .dropdown ul li a:hover {
 	background-color: rgba(255, 255, 255, 1) !important;
@@ -3231,7 +3234,8 @@ label {
 }
 .header .navbar-dark .navbar-nav {
 	/*background: none repeat scroll 0 0 #111;*/
-	background-color: rgba(228, 255, 0, 0.95);
+	/*background-color: rgba(228, 255, 0, 0.95);*/
+	background-color: rgba(255, 255, 255, 0.85);
 }
 .header .navbar-dark li a:hover, .header .navbar-dark li.dropdown.open > a {
 	/*background-color: rgba(136, 136, 136, 0.4);*/

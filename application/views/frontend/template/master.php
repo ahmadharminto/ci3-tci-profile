@@ -294,6 +294,7 @@
     <section class="divider bg16 parallax layer-overlay overlay-dark">
         <div class="container pt-100 pb-100">
             <div class="row">
+                <?php /*
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="funfact"> 
                         <i class="pe-7s-stopwatch text-white"></i>
@@ -308,11 +309,12 @@
                         <span>Projects Completed</span> 
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
+                */ ?>
+                <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="funfact"> 
                         <i class="pe-7s-smile text-white"></i>
                         <h2 class="animate-number text-white" data-value="146" data-animation-duration="3000">0</h2>
-                        <span>Happy Clients</span> 
+                        <span>Visitors</span> 
                     </div>
                 </div>
             </div>

@@ -10,17 +10,16 @@
                 <div class="col-sm-6 col-md-6">
                     <div class="footer-widget">
                         <h4 class="widget-title">Connect with us!</h4>
-                        <ul class="list-divider font-14">
+                        <ul class="list-divider font-12">
                             <li><a href="#"><i class="fa fa-user text-black-light mr-10"></i> care@trustcertified.co.id, trustcertint@gmail.com</a></li>
                             <li><a href="#"><i class="fa fa-phone text-black-light mr-10"></i> +62 812 9862 1159, +62 812 8453 5765 </a></li>
                             <li><a href="#"><i class="fa fa-map-marker text-black-light mr-10"></i> Jakarta Office: Jl. Mampang Prapatan Raya 98 D-F Jakarta Selatan</a></li>
                             <li><a href="#"><i class="fa fa-map-marker text-black-light mr-10"></i> Samarinda Office: Jl. Untung Surapati No. 16 Samarinda</a></li>
                         </ul>
                         <ul class="social-icons square list-inline">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a> </li>
-                            <li><a href="#"><i class="fa fa-youtube"></i></a> </li>
+                            <li><a href="https://www.facebook.com/trustcertint/" target="_blank"><i class="fa fa-facebook"></i></a> </li>
+                            <li><a href="https://twitter.com/trustcertint?lang=en" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+                            <li><a href="https://www.linkedin.com/in/trustcertint" target="_blank"><i class="fa fa-linkedin"></i></a> </li>
                         </ul>
                     </div>
                 </div>

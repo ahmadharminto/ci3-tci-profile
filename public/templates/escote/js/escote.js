@@ -1028,7 +1028,7 @@
     function escope_twittie() {
         $('.twitter-feed').twittie({
             apiPath: BASE_URL + 'public/templates/escote/api/tweet.php',
-            username: 'TechinAsia_ID',
+            username: 'trustcertint',
             dateFormat: '%b. %d, %Y',
             template: '{{tweet}} <div class="date">{{date}}</div>',
             count: 5,
