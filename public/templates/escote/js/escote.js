@@ -100,7 +100,10 @@
         $(window).trigger("scroll");
         $(window).trigger("resize");
         
-        var window_location_hash = $(window.location.hash);
+        var hash = window.location.hash;
+        hash = hash.replace('.pg', '', hash);
+
+        var window_location_hash = $(hash);
 
         // Hash Forwarding
         if (window_location_hash.length){

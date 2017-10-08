@@ -424,7 +424,7 @@
             </div>
         </div>
     </section>
-
 </div>
 
 <?php $this->load->view('frontend/template/footer'); ?>
+<?php $this->load->view('frontend/template/javascript'); ?>
