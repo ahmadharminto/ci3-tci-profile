@@ -50,10 +50,10 @@ class Home extends CI_Controller {
             $to_email = 'care@trustcertified.co.id';
 
             $config['protocol'] = 'smtp';
-            $config['smtp_host'] = 'smtp.sendgrid.net';
-            $config['smtp_port'] = '587';
-            $config['smtp_user'] = 'ahmadharminto';
-            $config['smtp_pass'] = 'Qwer!234';
+            $config['smtp_host'] = '';
+            $config['smtp_port'] = '';
+            $config['smtp_user'] = '';
+            $config['smtp_pass'] = '';
             $config['mailtype'] = 'html';
             $config['charset'] = 'iso-8859-1';
             $config['wordwrap'] = TRUE;
