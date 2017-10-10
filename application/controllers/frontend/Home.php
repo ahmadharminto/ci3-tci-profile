@@ -31,6 +31,7 @@ class Home extends CI_Controller {
 	public function sendContactForm()
 	{
 		$this->load->helper('security');
+		$this->config->load('sendgrid');
 
 		$this->form_validation->set_rules('name', 'Name', 'trim|required|callback_alpha_space_only');
         $this->form_validation->set_rules('email', 'Emaid ID', 'trim|required|valid_email');
@@ -50,10 +51,10 @@ class Home extends CI_Controller {
             $to_email = 'care@trustcertified.co.id';
 
             $config['protocol'] = 'smtp';
-            $config['smtp_host'] = '';
-            $config['smtp_port'] = '';
-            $config['smtp_user'] = '';
-            $config['smtp_pass'] = '';
+            $config['smtp_host'] = $this->config->item('sendgrid_smtp_host');
+            $config['smtp_port'] = $this->config->item('sendgrid_smtp_port');
+            $config['smtp_user'] = $this->config->item('sendgrid_smtp_username');
+            $config['smtp_pass'] = $this->config->item('sendgrid_smtp_password');
             $config['mailtype'] = 'html';
             $config['charset'] = 'iso-8859-1';
             $config['wordwrap'] = TRUE;

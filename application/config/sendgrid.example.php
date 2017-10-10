@@ -1,6 +1,6 @@
 <?php
 
-$config['smtp_host'] = '';
-$config['smtp_port'] = '';
-$config['smtp_username'] = '';
-$config['smtp_password'] = '';
+$config['sendgrid_smtp_host'] = '';
+$config['sendgrid_smtp_port'] = '';
+$config['sendgrid_smtp_username'] = '';
+$config['sendgrid_smtp_password'] = '';
