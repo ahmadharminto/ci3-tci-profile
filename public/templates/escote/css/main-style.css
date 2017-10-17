@@ -341,7 +341,8 @@ ul.list-divider li {
 	transition: all .3s ease 0s;
 }
 .social-icons a:hover {
-	background: #393939;
+	/*background: #393939;*/
+	background: #3A559F;
 }
 .social-icons a:hover i {
 	color: #fff;
