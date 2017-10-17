@@ -10,7 +10,7 @@ class Migrate extends CI_Controller
 
     public function index()
     {
-        redirect('/');
+        redirect('page/home');
     }
 
     public function do_migration($version=NULL)

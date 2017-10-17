@@ -305,7 +305,7 @@ ul.list-divider li {
 	display: inline-block;
 }
 .social-icons a {
-	background: #eee;
+	background: rgb(109, 104, 104);
 	border-radius: 50%;
 	display: block;
 	font-size: 16px;

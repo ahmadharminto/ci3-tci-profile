@@ -313,7 +313,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="funfact"> 
                         <i class="pe-7s-smile text-white"></i>
-                        <h2 class="animate-number text-white" data-value="146" data-animation-duration="3000">0</h2>
+                        <h2 class="animate-number text-white" data-value="<?php echo ($this->session->userdata('visitor')) ? $this->session->userdata('visitor') : 0; ?>" data-animation-duration="500">0</h2>
                         <span>Visitors</span> 
                     </div>
                 </div>
