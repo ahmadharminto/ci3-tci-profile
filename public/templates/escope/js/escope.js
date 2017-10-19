@@ -1030,7 +1030,7 @@
     /* ---------------------------------------------------------------------- */
     function escope_twittie() {
         $('.twitter-feed').twittie({
-            apiPath: BASE_URL + 'public/templates/escote/api/tweet.php',
+            apiPath: BASE_URL + 'public/templates/escope/api/tweet.php',
             username: 'trustcertint',
             dateFormat: '%b. %d, %Y',
             template: '{{tweet}} <div class="date">{{date}}</div>',

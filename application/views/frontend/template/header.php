@@ -19,14 +19,14 @@
     <link href="<?=base_url('public/images/apple-icon-144x144.png');?>" rel="apple-icon" sizes="144x144">
 
     <link href="<?=base_url('public/css/bootstrap.min.css');?>" rel="stylesheet" type="text/css">
-    <link href="<?=base_url('public/templates/escote/css/animate.css');?>" rel="stylesheet" type="text/css">
-    <link href="<?=base_url('public/templates/escote/css/css-plugin-collections.css');?>" rel="stylesheet"/>
-    <link  href="<?=base_url('public/templates/escote/js/revolution-slider/css/settings.css');?>" rel="stylesheet" type="text/css"/>
+    <link href="<?=base_url('public/templates/escope/css/animate.css');?>" rel="stylesheet" type="text/css">
+    <link href="<?=base_url('public/templates/escope/css/css-plugin-collections.css');?>" rel="stylesheet"/>
+    <link  href="<?=base_url('public/templates/escope/js/revolution-slider/css/settings.css');?>" rel="stylesheet" type="text/css"/>
 
-    <link href="<?=base_url('public/templates/escote/css/main-style.css');?>" rel="stylesheet" type="text/css">
-    <link href="<?=base_url('public/templates/escote/css/custom-bootstrap-margin-padding.css');?>" rel="stylesheet" type="text/css">
-    <link href="<?=base_url('public/templates/escote/css/responsive.css');?>" rel="stylesheet" type="text/css">
-    <link href="<?=base_url('public/templates/escote/css/style.css');?>" rel="stylesheet" type="text/css">
+    <link href="<?=base_url('public/templates/escope/css/main-style.css');?>" rel="stylesheet" type="text/css">
+    <link href="<?=base_url('public/templates/escope/css/custom-bootstrap-margin-padding.css');?>" rel="stylesheet" type="text/css">
+    <link href="<?=base_url('public/templates/escope/css/responsive.css');?>" rel="stylesheet" type="text/css">
+    <link href="<?=base_url('public/templates/escope/css/style.css');?>" rel="stylesheet" type="text/css">
 
     <link href="<?=base_url('public/css/frontend.css');?>" rel="stylesheet" type="text/css">
     
