@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="description" content="trustcertified" />
-    <meta name="keywords" content="trustcertified,PT Trust Certified International" />
+    <meta name="description" content="trustcertified,PT Trust Certified International,trust certified jasa marine surveyor,draft survey,superintendent,surveyor Indonesia,survey cargo,lashing dan securing" />
+    <meta name="keywords" content="trustcertified,PT Trust Certified International,trust certified jasa marine surveyor,draft survey,superintendent,surveyor Indonesia,survey cargo,lashing dan securing" />
     <meta name="author" content="Ahmad-Harminto" />
 
     <title>PT Trust Certified International</title>
