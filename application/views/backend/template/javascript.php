@@ -10,7 +10,6 @@
 <script type="text/javascript" src="<?=base_url('public/templates/limitless/js/plugins/forms/selects/select2.min.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('public/templates/limitless/js/plugins/notifications/noty.min.js');?>"></script>
 <script type="text/javascript">
-    var csrf_cookie_name = '<?php echo $this->config->item('csrf_cookie_name'); ?>';
     $(document).ready(function() {
         $('.flash-alert').delay(5000).fadeOut(500);
 

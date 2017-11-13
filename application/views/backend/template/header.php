@@ -15,4 +15,9 @@
 	<link href="<?=base_url('public/templates/limitless/css/core.css');?>" rel="stylesheet" type="text/css">
 	<link href="<?=base_url('public/templates/limitless/css/components.css');?>" rel="stylesheet" type="text/css">
 	<link href="<?=base_url('public/templates/limitless/css/colors.css');?>" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript">
+        var CSRF_COOKIE_NAME = '<?php echo $this->config->item('csrf_cookie_name'); ?>';
+		var BASE_URL = '<?=base_url();?>';
+    </script>
 </head>

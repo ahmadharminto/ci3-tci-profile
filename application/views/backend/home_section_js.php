@@ -46,7 +46,7 @@
             uploadUrl: "<?=base_url('/tci-admin/home/upload');?>",
             uploadExtraData: function() {
                 return {
-                    '<?=$this->security->get_csrf_token_name();?>': $.cookie(csrf_cookie_name)
+                    '<?=$this->security->get_csrf_token_name();?>': $.cookie(CSRF_COOKIE_NAME)
                 };
             },
             elErrorContainer: '#upload_error'
