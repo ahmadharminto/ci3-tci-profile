@@ -5,7 +5,7 @@
     <meta name="author" content="Ahmad-Harminto" />
 	<meta name="<?=$this->security->get_csrf_token_name();?>" content="<?=$this->security->get_csrf_hash();?>" />
 
-    <title>.::CPanel::.</title>
+    <title>.::TCI-Panel::.</title>
 
 	<?php $this->load->view('favicon'); ?>
 

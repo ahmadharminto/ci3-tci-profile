@@ -54,9 +54,9 @@ $route['default_controller'] = 'home';
 $route['page/(:any)'] = 'frontend/$1';
 $route['page/([a-zA-Z]+)/(:any)'] = 'frontend/$1/$2';
 
-$route['cpanel/(:any)'] = 'backend/$1';
-$route['cpanel/([a-zA-Z]+)/(:any)'] = 'backend/$1/$2';
-$route['cpanel/([a-zA-Z]+)/(:any)/(:any)'] = 'backend/$1/$2/$3';
+$route['tci-admin/(:any)'] = 'backend/$1';
+$route['tci-admin/([a-zA-Z]+)/(:any)'] = 'backend/$1/$2';
+$route['tci-admin/([a-zA-Z]+)/(:any)/(:any)'] = 'backend/$1/$2/$3';
 
 $route['404_override'] = 'My404Page';
 $route['translate_uri_dashes'] = FALSE;

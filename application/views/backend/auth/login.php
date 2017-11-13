@@ -25,7 +25,7 @@
 			<div class="content-wrapper">
 				<div class="content">
                     <?php $attributes = array("name" => "loginform", "method" => "post"); ?>
-                    <?=form_open('/cpanel/auth/check', $attributes);?>
+                    <?=form_open('/tci-admin/auth/check', $attributes);?>
 						<div class="panel panel-body login-form">
 							<?php echo $this->session->flashdata('login_msg'); ?>
 							<div class="text-center">

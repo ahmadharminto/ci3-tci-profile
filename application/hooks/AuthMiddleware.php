@@ -18,10 +18,10 @@ class AuthMiddleware {
         $this->controller_ignored_list = [];
         $this->table_visitor = 'visitor_log';
         $this->auth_ignored_path = [
-            'cpanel/auth/index',
-            'cpanel/auth/login',
-            'cpanel/auth/check',
-            'cpanel/auth/logout',
+            'tci-admin/auth/index',
+            'tci-admin/auth/login',
+            'tci-admin/auth/check',
+            'tci-admin/auth/logout',
             'backend/auth/index',
             'backend/auth/login',
             'backend/auth/check',
@@ -37,13 +37,13 @@ class AuthMiddleware {
         if ($page_name == 'home/timestamp') return;
         if ($class == 'migrate') return;
 
-        if (($this->CI->uri->segment(1) == 'cpanel' || $this->CI->uri->segment(1) == 'backend')) {
+        if (($this->CI->uri->segment(1) == 'tci-admin' || $this->CI->uri->segment(1) == 'backend')) {
             if (!in_array($this->CI->uri->uri_string, $this->auth_ignored_path) && ($this->CI->session->userdata('in_session') == NULL || $this->CI->session->userdata('in_session') === FALSE)) {
-                redirect('/cpanel/auth/login');
+                redirect('/tci-admin/auth/login');
             }
 
-            if ($this->CI->uri->uri_string == 'cpanel' || $this->CI->uri->uri_string == 'backend') {
-                redirect('/cpanel/auth/login');
+            if ($this->CI->uri->uri_string == 'tci-admin' || $this->CI->uri->uri_string == 'backend') {
+                redirect('/tci-admin/auth/login');
             }
             
             if (!in_array($this->CI->uri->uri_string, $this->auth_ignored_path)) {

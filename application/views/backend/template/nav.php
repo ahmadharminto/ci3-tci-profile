@@ -1,7 +1,7 @@
 <!-- Main navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
-        <a class="navbar-brand" href="<?=base_url('/cpanel');?>"><img src="<?=base_url('public/images/logo_bg.png');?>" alt=""></a>
+        <a class="navbar-brand" href="<?=base_url('/tci-admin');?>"><img src="<?=base_url('public/images/logo_bg.png');?>" alt=""></a>
         <ul class="nav navbar-nav pull-right visible-xs-block">
             <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
             <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
@@ -19,9 +19,9 @@
                     <i class="caret"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="<?=base_url('cpanel/user/myprofile');?>"><i class="icon-cog"></i> My profile</a></li>
+                    <li><a href="<?=base_url('tci-admin/user/myprofile');?>"><i class="icon-cog"></i> My profile</a></li>
                     <li class="divider"></li>
-                    <li><a href="<?=base_url('cpanel/auth/logout.pg');?>"><i class="icon-switch2"></i> Logout</a></li>
+                    <li><a href="<?=base_url('tci-admin/auth/logout.pg');?>"><i class="icon-switch2"></i> Logout</a></li>
                 </ul>
             </li>
         </ul>

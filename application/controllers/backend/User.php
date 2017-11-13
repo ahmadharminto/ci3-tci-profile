@@ -17,7 +17,7 @@ class User extends CI_Controller {
 		);
 
 		$data_js = array(
-			'url_datatables'  => base_url('/cpanel/user/datatables'),
+			'url_datatables'  => base_url('/tci-admin/user/datatables'),
 			'start_page'      => 0,
 			'display_page'    => 10,
 			'header_disabled' => [0,1,2,3,4,5,6],
@@ -25,8 +25,8 @@ class User extends CI_Controller {
 		);
 
 		$data_content = array(
-			'url_home'    => base_url('/cpanel/user'),
-			'url_add'     => base_url('/cpanel/user/add'),
+			'url_home'    => base_url('/tci-admin/user'),
+			'url_add'     => base_url('/tci-admin/user/add'),
 			'data_filter' => $data_filter
 		);
 
@@ -83,7 +83,7 @@ class User extends CI_Controller {
 				: '<span class="label label-danger">NO</span>';
 
 			$action = '<div class="text-right">';
-			$action .= '<a href="'.base_url('/cpanel/user/edit/'.$row->id).'" class="btn btn-xs btn-default"><i class="icon-pencil"></i></a>';
+			$action .= '<a href="'.base_url('/tci-admin/user/edit/'.$row->id).'" class="btn btn-xs btn-default"><i class="icon-pencil"></i></a>';
 			$action .= '</div>';
 
 			array_push($return['data'],array(
@@ -106,8 +106,8 @@ class User extends CI_Controller {
 	public function add()
 	{
 		$data_content = array(
-			'url_home' => base_url('/cpanel/user'),
-			'url_post' => base_url('/cpanel/user/save') 
+			'url_home' => base_url('/tci-admin/user'),
+			'url_post' => base_url('/tci-admin/user/save') 
 		);
 
 		$data = array(
@@ -148,7 +148,7 @@ class User extends CI_Controller {
 			$this->model_users->save($set_array);
 
 			$this->session->set_flashdata('message','<div class="alert alert-success flash-alert text-center">New user saved successfully!</div>');
-			redirect('/cpanel/user');
+			redirect('/tci-admin/user');
 		}
 	}
 
@@ -160,8 +160,8 @@ class User extends CI_Controller {
 
 			if ($query->num_rows() > 0) {
 				$data_content = array(
-					'url_home'     => base_url('/cpanel/user'),
-					'url_post'     => base_url('/cpanel/user/update'),
+					'url_home'     => base_url('/tci-admin/user'),
+					'url_post'     => base_url('/tci-admin/user/update'),
 					'row'          => $query->row(),
 					'is_myprofile' => FALSE
 				);
@@ -175,11 +175,11 @@ class User extends CI_Controller {
 			}
 			else {
 				$this->session->set_flashdata('message','<div class="alert alert-warning flash-alert text-center">User does not exists!</div>');
-				redirect('/cpanel/user');
+				redirect('/tci-admin/user');
 			}
 		}
 		else {
-			redirect('/cpanel/user');
+			redirect('/tci-admin/user');
 		}
 	}
 
@@ -224,7 +224,7 @@ class User extends CI_Controller {
 				$this->model_users->update($set_array, $where_array);
 	
 				$this->session->set_flashdata('message','<div class="alert alert-success flash-alert text-center">User updated successfully!</div>');
-				redirect('/cpanel/user');
+				redirect('/tci-admin/user');
 			}
 			
 		} 
@@ -240,7 +240,7 @@ class User extends CI_Controller {
 
 		if ($query->num_rows() > 0) {
 			$data_content = array(
-				'url_post'     => base_url('/cpanel/user/myprofile_update'),
+				'url_post'     => base_url('/tci-admin/user/myprofile_update'),
 				'row'          => $query->row(),
 				'is_myprofile' => TRUE
 			);
@@ -253,13 +253,13 @@ class User extends CI_Controller {
 			$this->load->view('backend/template/master', $data);
 		}
 		else {
-			redirect('/cpanel/home');
+			redirect('/tci-admin/home');
 		}
 	}
 
 	public function myprofile_update() 
 	{
-		if (!$this->input->post()) redirect('/cpanel/home');
+		if (!$this->input->post()) redirect('/tci-admin/home');
 
 		if ($this->session->userdata('meta_session')->id > 0) {
 			$is_unique_email = '';
@@ -298,12 +298,12 @@ class User extends CI_Controller {
 				$this->model_users->update($set_array, $where_array);
 	
 				$this->session->set_flashdata('message','<div class="alert alert-success flash-alert text-center">User updated successfully!</div>');
-				redirect('/cpanel/user/myprofile');
+				redirect('/tci-admin/user/myprofile');
 			}
 			
 		} 
 		else {
-			redirect('/cpanel/home');
+			redirect('/tci-admin/home');
 		}	
 	}
 }

@@ -32,7 +32,7 @@ class Home extends CI_Controller {
 		$this->form_validation->set_rules('g-recaptcha-response','Captcha','callback_recaptcha');
 		
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('frontend/template/master');
+			$this->index();
         }
         else {
 			$name = $this->input->post('name', TRUE);

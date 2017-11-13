@@ -31,7 +31,7 @@ class Home extends CI_Controller {
 	public function csrf_mismatch()
 	{
 		$flash = 'Session cookie automatically reset due to expired browser session / resubmitting form. Please try again.';
-		$url = ($this->input->get('url')) ? $this->input->get('url') : base_url('/cpanel');
+		$url = ($this->input->get('url')) ? $this->input->get('url') : base_url('/tci-admin');
 		
 		if ($this->input->get('ajax') == 1) {
 			return $this->output

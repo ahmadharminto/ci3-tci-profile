@@ -43,7 +43,7 @@
             initialCaption: "No file selected",
             allowedFileExtensions: ["jpg", "gif", "png", "jpeg"],
             uploadAsync: false,
-            uploadUrl: "<?=base_url('/cpanel/home/upload');?>",
+            uploadUrl: "<?=base_url('/tci-admin/home/upload');?>",
             uploadExtraData: function() {
                 return {
                     '<?=$this->security->get_csrf_token_name();?>': $.cookie(csrf_cookie_name)

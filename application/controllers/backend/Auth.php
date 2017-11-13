@@ -12,19 +12,19 @@ class Auth extends CI_Controller {
 
 	public function index()
 	{
-		redirect('/cpanel/auth/login');
+		redirect('/tci-admin/auth/login');
 	}
 
 	public function login()
 	{
-		if ($this->session->userdata('in_session') === TRUE) redirect('/cpanel/home');
+		if ($this->session->userdata('in_session') === TRUE) redirect('/tci-admin/home');
 
 		$this->load->view('backend/auth/login');
 	}
 
     public function check()
     {
-		if (!$this->input->post()) redirect('/cpanel/auth/login');
+		if (!$this->input->post()) redirect('/tci-admin/auth/login');
 
 		$this->load->helper('security');
 		
@@ -48,7 +48,7 @@ class Auth extends CI_Controller {
 				if (password_verify($password, $row->password)) {
 					$this->session->set_userdata('in_session', TRUE);
 					$this->session->set_userdata('meta_session', $row);
-					redirect('cpanel/home');
+					redirect('tci-admin/home');
 				}
 				else {
 					$this->session->set_flashdata('login_msg','<div class="alert alert-danger text-center">Email or Password Not Found!</div>');
