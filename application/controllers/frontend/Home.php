@@ -18,7 +18,7 @@ class Home extends CI_Controller {
 		}
 	}
 
-	public function sendContactForm()
+	public function send_contact_form()
 	{
 		if (!$this->input->post()) redirect('/');
 

@@ -32,7 +32,7 @@
                 <div class="section-content">
                     <?php echo $this->session->flashdata('contact_msg'); ?>
                     <?php $attributes = array("class" => "form-horizontal", "name" => "contactform", "method" => "post"); ?>
-                    <?php echo form_open("page/home/sendContactForm.pg#footer", $attributes);?>
+                    <?php echo form_open("page/home/send_contact_form.pg#footer", $attributes);?>
                     <fieldset>
                         <legend>Interested in discussing?</legend>
                         <div class="form-group">
