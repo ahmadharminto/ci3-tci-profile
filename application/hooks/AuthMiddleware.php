@@ -7,26 +7,71 @@ class AuthMiddleware {
     private $ip_ignored_list;
     private $controller_ignored_list;
     private $table_visitor;
+    private $ignored_path;
     
     public function __construct()
     {
-      $this->CI = & get_instance();
+        $this->CI =& get_instance();
 
-      $this->ignore_search_bot = TRUE;
-      $this->ip_ignored_list = [];
-      $this->controller_ignored_list = [];
-      $this->table_visitor = 'visitor_log';
+        $this->ignore_search_bot = TRUE;
+        $this->ip_ignored_list = [];
+        $this->controller_ignored_list = [];
+        $this->table_visitor = 'visitor_log';
+        $this->auth_ignored_path = [
+            'cpanel/auth/index',
+            'cpanel/auth/login',
+            'cpanel/auth/check',
+            'cpanel/auth/logout',
+            'backend/auth/index',
+            'backend/auth/login',
+            'backend/auth/check',
+            'backend/auth/logout'
+        ];
     }
 
     public function handle()
     {
         $class = $this->CI->router->fetch_class();
-        $pageName = $class . '/' . $this->CI->router->fetch_method();
+        $page_name = $class . '/' . $this->CI->router->fetch_method();
 
-        if ($pageName == 'home/timestamp') return;
+        if ($page_name == 'home/timestamp') return;
         if ($class == 'migrate') return;
 
-        if (current_url() != base_url()) $this->visitorCounter();
+        if (($this->CI->uri->segment(1) == 'cpanel' || $this->CI->uri->segment(1) == 'backend')) {
+            if (!in_array($this->CI->uri->uri_string, $this->auth_ignored_path) && ($this->CI->session->userdata('in_session') == NULL || $this->CI->session->userdata('in_session') === FALSE)) {
+                redirect('/cpanel/auth/login');
+            }
+
+            if ($this->CI->uri->uri_string == 'cpanel' || $this->CI->uri->uri_string == 'backend') {
+                redirect('/cpanel/auth/login');
+            }
+            
+            if (!in_array($this->CI->uri->uri_string, $this->auth_ignored_path)) {
+                // update user-session info
+                $existing_session = $this->CI->session->userdata('meta_session');
+                $this->CI->load->model('users', 'model_users');
+                $this->CI->db->where('users.id', $existing_session->id);
+                $query = $this->CI->model_users->get_all();
+                if ($query->num_rows() > 0) {
+                    $row = $query->row();
+                    $this->CI->session->set_userdata('meta_session', $row);
+                }
+
+                $page_type = '';
+                if ($page_name == 'home/index') $page_type = 'home_section';
+                elseif ($page_name == 'user/index' || $page_name == 'user/add' || $page_name == 'user/save' || $page_name == 'user/edit' || $page_name == 'user/update') $page_type = 'config_user';
+
+                // share variable
+                $this->CI->load->vars([
+                    'current_page' => $page_name,
+                    'current_uri_string' => $this->CI->uri->uri_string,
+                    'page_type' => $page_type
+                ]);
+            }
+        }
+        else {
+            if (current_url() != base_url()) $this->visitorCounter();
+        }
     }
 
     private function visitorCounter()

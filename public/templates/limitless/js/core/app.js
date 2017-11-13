@@ -361,6 +361,9 @@ $(function() {
     //
     // ========================================
 
+    if (localStorage.getItem('sidebar_menu') == 'shown') $('body').removeClass('sidebar-xs');
+    else $('body').addClass('sidebar-xs');
+
 
     // Mini sidebar
     // -------------------------
@@ -371,6 +374,9 @@ $(function() {
 
         // Toggle min sidebar class
         $('body').toggleClass('sidebar-xs');
+
+        if ($('body').hasClass('sidebar-xs')) localStorage.setItem('sidebar_menu', 'hidden');
+        else localStorage.setItem('sidebar_menu', 'shown');
     });
 
 

@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
     <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -9,14 +6,11 @@
     <meta name="description" content="trustcertified,PT Trust Certified International,trust certified jasa marine surveyor,draft survey,superintendent,surveyor Indonesia,survey cargo,lashing dan securing" />
     <meta name="keywords" content="trustcertified,PT Trust Certified International,trust certified jasa marine surveyor,draft survey,superintendent,surveyor Indonesia,survey cargo,lashing dan securing" />
     <meta name="author" content="Ahmad-Harminto" />
+    <meta name="<?=$this->security->get_csrf_token_name();?>" content="<?=$this->security->get_csrf_hash();?>" />
 
     <title>PT Trust Certified International</title>
 
-    <link href="<?=base_url('public/images/favicon.png');?>" rel="shortcut icon" type="image/png">
-    <link href="<?=base_url('public/images/apple-icon.png');?>" rel="apple-icon">
-    <link href="<?=base_url('public/images/apple-icon-72x72.png');?>" rel="apple-icon" sizes="72x72">
-    <link href="<?=base_url('public/images/apple-icon-114x114.png');?>" rel="apple-icon" sizes="114x114">
-    <link href="<?=base_url('public/images/apple-icon-144x144.png');?>" rel="apple-icon" sizes="144x144">
+    <?php $this->load->view('favicon'); ?>
 
     <link href="<?=base_url('public/css/bootstrap.min.css');?>" rel="stylesheet" type="text/css">
     <link href="<?=base_url('public/templates/escope/css/animate.css');?>" rel="stylesheet" type="text/css">
@@ -40,8 +34,4 @@
     <script type="text/javascript">
         var BASE_URL = '<?=base_url();?>';
     </script>
-
 </head>
-<body>
-    <div id="wrapper">
-        <div id="preloader"><div id="spinner"></div></div>

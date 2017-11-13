@@ -292,7 +292,17 @@ class CI_Security {
 	 */
 	public function csrf_show_error()
 	{
-		show_error('The action you have requested is not allowed.', 403);
+		// $message = '<br/>Do not panic! Just back to last url accessed, and refresh the page.';
+		// show_error('The action you have requested is not allowed.'.$message, 403);
+
+		$is_ajax_request = ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest');
+
+		$url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+		$redirect = config_item('base_url').'home/csrf_mismatch?url='.htmlspecialchars($url);
+
+		if ($is_ajax_request) $redirect .= '&ajax=1';
+		
+		header('Location: '.$redirect, TRUE, 302);
 	}
 
 	// --------------------------------------------------------------------

@@ -26,5 +26,25 @@ class Home extends CI_Controller {
     public function timestamp()
     {
         echo date('YmdHis');
-    }
+	}
+	
+	public function csrf_mismatch()
+	{
+		$flash = 'Session cookie automatically reset due to expired browser session / resubmitting form. Please try again.';
+		$url = ($this->input->get('url')) ? $this->input->get('url') : base_url('/cpanel');
+		
+		if ($this->input->get('ajax') == 1) {
+			return $this->output
+				->set_content_type('application/json')
+				->set_status_header(403)
+				->set_output(json_encode([
+					'error' => $flash,
+					'url' => $url
+				]));
+		}
+		else {
+			$this->session->set_userdata('csrf_mismatch', $flash);
+			redirect($url, 'refresh');
+		}
+	}
 }
