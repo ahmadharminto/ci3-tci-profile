@@ -133,6 +133,8 @@ class Migration_Create_home_section_table extends CI_Migration {
     public function down()
     {
         $this->dbforge->drop_table('home_section', TRUE);
+        $this->db->where_in('users.id', [1,2]);
+        $this->db->delete('users');
     }
 
 }

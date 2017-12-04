@@ -1,3 +1,7 @@
+<?php
+    $company_logo = ($home_section_data->company_logo) ? base_url('public/images/upload/'.$home_section_data->company_logo) : '';
+?>
+
 <header class="header">
     <div class="header-nav"> 
         <!-- menu -->
@@ -8,7 +12,7 @@
                         <div class="navbar-header">
                             <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                             <!-- logo --> 
-                            <a id="header-logo" href="<?=base_url();?>" class="navbar-brand"><img src="<?=base_url('public/images/logo.png');?>" alt=""></a></div>
+                            <a id="header-logo" href="<?=base_url();?>" class="navbar-brand"><img src="<?=$company_logo;?>" alt=""></a></div>
                             <!-- end logo -->
                             <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" role="menu" style="height: 1px;">
                                 <ul class="nav navbar-nav navbar-right">

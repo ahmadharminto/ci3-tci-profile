@@ -6,8 +6,11 @@
 <script type="text/javascript" src="<?=base_url('public/templates/limitless/js/plugins/uploaders/fileinput.min.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('public/templates/limitless/js/core/app.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('public/templates/limitless/js/pages/layout_fixed_custom.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('public/templates/limitless/js/plugins/editors/summernote/summernote.min.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('public/templates/limitless/js/plugins/forms/styling/uniform.min.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('public/templates/limitless/js/plugins/tables/datatables/datatables.min.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('public/templates/limitless/js/plugins/forms/selects/select2.min.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('public/templates/limitless/js/plugins/forms/styling/switch.min.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('public/templates/limitless/js/plugins/notifications/noty.min.js');?>"></script>
 <script type="text/javascript">
     $(document).ready(function() {

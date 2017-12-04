@@ -3,16 +3,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+
+		$this->load->model('HomeSection', 'model_home_section');
+	}
+
 	public function index()
 	{
 		if ($this->config->item('under_maintenance')) {
 			$this->load->view('welcome_message');
 		} 
 		else {
+			$this->db->where('home_section.id', 1);
+			$this->db->where('home_section.is_default', 1);
+			$query = $this->model_home_section->get_all();
+			$home_section_data = $query->row();
+			$data_view = [
+				'home_section_data' => $home_section_data,
+				'url_send_mail'     => base_url().'page/home/send_contact_form.pg#footer'
+			];
+
 			$data = [
-				'nav' => '',
-				'content' => $this->load->view('frontend/home_section', null, TRUE),
-				'footer' => ''
+				'title' => $home_section_data->title,
+				'nav' => $this->load->view('frontend/template/nav', $data_view, TRUE),
+				'content' => $this->load->view('frontend/home_section', $data_view, TRUE),
+				'footer' => $this->load->view('frontend/template/footer', $data_view, TRUE)
 			];
 			$this->load->view('frontend/template/master', $data);
 		}
