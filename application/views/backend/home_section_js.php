@@ -73,6 +73,17 @@
         idx_our_services = $('.our-services-idx').val();
         idx_working_areas = $('.working-areas-idx').val();
 
+        $('[data-toggle="popover"]').popover({
+            template: '<div class="popover" role="tooltip" style="width: 100%;">' +
+                '<div class="arrow"></div>' +
+                '<h5 class="popover-title"></h5>' +
+                '<div class="popover-content">' +
+                '<div class="data-content"></div>' +
+                '</div>' +
+                '</div>',
+            html: true
+        });
+
         $('a[data-action="collapse"]').trigger('click');
 
         $('.summernote').on('summernote.init', function () {

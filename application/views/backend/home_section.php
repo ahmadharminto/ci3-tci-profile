@@ -96,7 +96,7 @@
                         <div class="summernote about-us" data-name="about_us_text" data-is_summernote="true"><?=urldecode($home_section_data->about_us_text);?></div>
                     </div>
                     <div class="form-group">
-                        <label>Image</label>
+                        <label>Image <span class="text-success" data-toggle="popover" data-placement="auto" data-trigger="hover" title="Notes" data-content="For best result, please use image with resolution 800x600"><i class="fa fa-info-circle"></i></span></label>
                         <div id="about_us_image_upload_error" style="margin-top:10px;display:none"></div>
                         <input type="file" name="image" class="single-image-input" data-rename_to="about_us" data-error_div="about_us_image_upload_error" data-target_value="about_us_image">
                         <input id="about_us_image" type="hidden" class="about-us" data-name="about_us_image" value="<?=$home_section_data->about_us_image;?>" data-is_summernote="false">
@@ -115,7 +115,7 @@
         <div class="col-md-12">
             <div class="panel panel-flat">
                 <div class="panel-heading">
-                    <h5 class="panel-title">Home Slider</h5>
+                    <h5 class="panel-title">Home Slider <span class="text-success" data-toggle="popover" data-placement="auto" data-trigger="hover" title="Notes" data-content="For best result, please use image with resolution 1920x1280"><i class="fa fa-info-circle"></i></span></h5>
                     <div class="heading-elements">
                         <ul class="icons-list">
                             <li><a data-action="collapse"></a></li>
@@ -354,6 +354,7 @@
                         </ul>
                     </div>
                 </div>
+                
                 <div class="panel-body">
                     <div class="checkbox checkbox-switch">
                         <label>
@@ -367,7 +368,7 @@
                     </div>
                     <hr/>
                     <div class="form-group">
-                        <label>Parallax Image</label>
+                        <label>Parallax Image <span class="text-success" data-toggle="popover" data-placement="auto" data-trigger="hover" title="Notes" data-content="For best result, please use image with resolution 1920x1280"><i class="fa fa-info-circle"></i></span></label>
                         <div id="parallax_image_upload_error" style="margin-top:10px;display:none"></div>
                         <input type="file" name="image" class="single-image-input" data-rename_to="parallax_image" data-error_div="parallax_image_upload_error" data-target_value="parallax_image">
                         <input id="parallax_image" type="hidden" class="divider-visibility" data-name="parallax_image" value="" data-is_summernote="false">

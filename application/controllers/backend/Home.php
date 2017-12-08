@@ -51,14 +51,14 @@ class Home extends CI_Controller {
 
 		if ($data_for == 'company_info') {
 			$set_array = array();
-			if ($this->input->post('web_title')) $set_array['title'] = $this->input->post('web_title');
-			if ($this->input->post('company_name')) $set_array['company_name'] = $this->input->post('company_name');
-			if ($this->input->post('company_logo')) $set_array['company_logo'] = $this->input->post('company_logo');
+			if ($this->input->post('web_title')) $set_array['title'] = urldecode($this->input->post('web_title'));
+			if ($this->input->post('company_name')) $set_array['company_name'] = urldecode($this->input->post('company_name'));
+			if ($this->input->post('company_logo')) $set_array['company_logo'] = urldecode($this->input->post('company_logo'));
 			$address_array = array();
-			if ($this->input->post('company_contact_email')) $address_array['company_contact_email'] = $this->input->post('company_contact_email');
-			if ($this->input->post('company_contact_phone')) $address_array['company_contact_phone'] = $this->input->post('company_contact_phone');
-			if ($this->input->post('company_address1')) $address_array['company_address1'] = $this->input->post('company_address1');
-			if ($this->input->post('company_address2')) $address_array['company_address2'] = $this->input->post('company_address2');
+			if ($this->input->post('company_contact_email')) $address_array['company_contact_email'] = urldecode($this->input->post('company_contact_email'));
+			if ($this->input->post('company_contact_phone')) $address_array['company_contact_phone'] = urldecode($this->input->post('company_contact_phone'));
+			if ($this->input->post('company_address1')) $address_array['company_address1'] = urldecode($this->input->post('company_address1'));
+			if ($this->input->post('company_address2')) $address_array['company_address2'] = urldecode($this->input->post('company_address2'));
 			$set_array['company_address_json'] = json_encode($address_array);
 			$set_array['updated_at'] = date('Y-m-d H:i:s');
 
