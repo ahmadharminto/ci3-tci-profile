@@ -401,32 +401,34 @@
                 var name = $(fld).data('name');
                 var value = $(fld).val();
 
-                $('.single-image-input').each(function(index, field) {
-                    if ($(field).data('target_value') == name) {
-                        $(field).fileinput('reset')
-                            .fileinput('clear')
-                            .fileinput('refresh', {
-                                initialPreview: [
-                                    '<img src="' + BASE_URL + 'public/images/upload/' + value + '?ts=' + new Date().getTime() + '" class="file-preview-image" alt="' + value + '" title="' + value + '">'
-                                ],
-                                initialPreviewConfig: [
-                                    {
-                                        caption: '<?=$home_section_data->parallax_bground_img;?>',
-                                        width: '120px',
-                                        url: BASE_URL + 'tci-admin/home/delete_uploaded',
-                                        key: 0,
-                                        extra: {
-                                            '<?=$this->security->get_csrf_token_name();?>': $.cookie(CSRF_COOKIE_NAME),
-                                            file_name: '<?=$home_section_data->parallax_bground_img;?>'
+                if (value != '') {
+                    $('.single-image-input').each(function(index, field) {
+                        if ($(field).data('target_value') == name) {
+                            $(field).fileinput('reset')
+                                .fileinput('clear')
+                                .fileinput('refresh', {
+                                    initialPreview: [
+                                        '<img src="' + BASE_URL + 'public/images/upload/' + value + '?ts=' + new Date().getTime() + '" class="file-preview-image" alt="' + value + '" title="' + value + '">'
+                                    ],
+                                    initialPreviewConfig: [
+                                        {
+                                            caption: value,
+                                            width: '120px',
+                                            url: BASE_URL + 'tci-admin/home/delete_uploaded',
+                                            key: 0,
+                                            extra: {
+                                                '<?=$this->security->get_csrf_token_name();?>': $.cookie(CSRF_COOKIE_NAME),
+                                                file_name: '<?=$home_section_data->parallax_bground_img;?>'
+                                            }
                                         }
-                                    }
-                                ]
-                            })
-                            .fileinput('enable');
+                                    ]
+                                })
+                                .fileinput('enable');
 
-                        return false;
-                    }
-                });
+                            return false;
+                        }
+                    });
+                }
             }
         });
 
