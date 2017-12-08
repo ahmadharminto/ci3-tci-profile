@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    var modalTemplate = '<div class="modal-dialog modal-lg" role="document">\n' +
+    var zoomModalTemplate = '<div class="modal-dialog modal-lg" role="document">\n' +
         '  <div class="modal-content">\n' +
         '    <div class="modal-header">\n' +
         '      <div class="kv-zoom-actions btn-group">{fullscreen}{borderless}{close}</div>\n' +
@@ -257,7 +257,8 @@
                 browseIcon: '<i class="icon-plus22"></i> ',            
                 layoutTemplates: {
                     icon: '<i class="icon-file-check"></i>',
-                    modal: modalTemplate
+                    modalMain: '<div id="kvFileinputModal" class="file-zoom-dialog modal fade" tabindex="-1" aria-labelledby="kvFileinputModalLabel"></div>',
+                    modal: zoomModalTemplate
                 },
                 fileActionSettings: {
                     showRemove: true,
@@ -427,6 +428,21 @@
                     }
                 });
             }
+        });
+
+        $("#kvFileinputModal").detach().appendTo('.content');
+
+        $(document).on('show.bs.modal', '.modal', function (event) {
+            var zIndex = 1040 + (10 * $('.modal:visible').length);
+            $(this).css('z-index', zIndex);
+            setTimeout(function() {
+                $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+            }, 0);
+            $('.modal').on("hidden.bs.modal", function (e) { //fire on closing modal box
+                if ($('.modal:visible').length) { // check whether parent modal is opend after child modal close
+                    $('body').addClass('modal-open'); // if open mean length is 1 then add a bootstrap css class to body of the page
+                }
+            });
         });
     });
 </script>
