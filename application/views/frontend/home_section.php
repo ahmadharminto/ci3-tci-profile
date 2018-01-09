@@ -44,7 +44,7 @@
                     </li>
                     <!-- SLIDE 3 -->
                     <li data-transition="random" data-slotamount="4" data-masterspeed="300" data-thumb="http://placehold.it/1920x1280" data-saveperformance="off" data-title="Quick Results">
-                        <img src="<?=$slider_image1;?>" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                        <img src="<?=$slider_image3;?>" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                         <?=urldecode($slider_text1);?>
                     </li>
                 </ul>
