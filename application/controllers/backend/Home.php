@@ -97,6 +97,11 @@ class Home extends CI_Controller {
 				}
 			}
 
+			$set_array = array();
+			$set_array['home_slider_json'] = json_encode($data);
+
+			$this->model_home_section->update($set_array, ['id' => $id]);
+
 			if (!$check_val || empty($data)) {
 				return $this->output
 					->set_content_type('application/json')
@@ -106,11 +111,6 @@ class Home extends CI_Controller {
 						'error' => '"Some Slider Image / Title" are Empty'
 					]));
 			}
-
-			$set_array = array();
-			$set_array['home_slider_json'] = json_encode($data);
-
-			$this->model_home_section->update($set_array, ['id' => $id]);
 		}
 		elseif ($data_for == 'our_services' || $data_for == 'working_areas') {
 			$titles = $this->input->post('title');
