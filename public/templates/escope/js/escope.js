@@ -101,7 +101,7 @@
         $(window).trigger("resize");
         
         var hash = window.location.hash;
-        hash = hash.replace('.pg', '', hash);
+        hash = hash.replace('.html', '', hash);
 
         var window_location_hash = $(hash);
 

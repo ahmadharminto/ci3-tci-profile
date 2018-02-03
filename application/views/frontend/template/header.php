@@ -8,7 +8,7 @@
     <meta name="author" content="Ahmad-Harminto" />
     <meta name="<?=$this->security->get_csrf_token_name();?>" content="<?=$this->security->get_csrf_hash();?>" />
 
-    <title><?=$title;?></title>
+    <title><?=isset($title) ? $title : '';?></title>
 
     <?php $this->load->view('favicon'); ?>
 

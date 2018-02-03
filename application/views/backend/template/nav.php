@@ -21,7 +21,7 @@
                 <ul class="dropdown-menu dropdown-menu-right">
                     <li><a href="<?=base_url('tci-admin/user/myprofile');?>"><i class="icon-cog"></i> My profile</a></li>
                     <li class="divider"></li>
-                    <li><a href="<?=base_url('tci-admin/auth/logout.pg');?>"><i class="icon-switch2"></i> Logout</a></li>
+                    <li><a href="<?=base_url('tci-admin/auth/logout.html');?>"><i class="icon-switch2"></i> Logout</a></li>
                 </ul>
             </li>
         </ul>

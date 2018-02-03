@@ -22,7 +22,7 @@ class Home extends CI_Controller {
 			$home_section_data = $query->row();
 			$data_view = [
 				'home_section_data' => $home_section_data,
-				'url_send_mail'     => base_url().'page/home/send_contact_form.pg#footer'
+				'url_send_mail'     => base_url().'page/home/send_contact_form.html#footer'
 			];
 
 			$data = [
@@ -79,11 +79,11 @@ class Home extends CI_Controller {
             $this->email->message($message);
             if ($this->email->send()) {
 				$this->session->set_flashdata('contact_msg','<div class="alert alert-success text-center">Your message has been sent successfully!</div>');
-                redirect('/page/home.pg#footer');
+                redirect('/page/home.html#footer');
             }
             else {
 				$this->session->set_flashdata('contact_msg','<div class="alert alert-danger text-center">There is error in sending message! Please try again later</div>');
-				redirect('/page/home.pg#footer');
+				redirect('/page/home.html#footer');
 			}
 		}
 	}

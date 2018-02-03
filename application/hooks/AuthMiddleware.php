@@ -8,6 +8,7 @@ class AuthMiddleware {
     private $controller_ignored_list;
     private $table_visitor;
     private $ignored_path;
+    private $ignored_class;
     
     public function __construct()
     {
@@ -26,6 +27,9 @@ class AuthMiddleware {
             'backend/auth/login',
             'backend/auth/check',
             'backend/auth/logout'
+        ];
+        $this->ignored_class = [
+            'public'
         ];
     }
 
@@ -70,11 +74,11 @@ class AuthMiddleware {
             }
         }
         else {
-            if (current_url() != base_url()) $this->visitorCounter();
+            if ($class && !in_array($class, $this->ignored_class)) $this->logVisitor($page_name);
         }
     }
 
-    private function visitorCounter()
+    private function logVisitor($page_name)
     {
         $proceed = TRUE;
 
@@ -93,83 +97,61 @@ class AuthMiddleware {
             }
         }
 
-        if ($proceed === TRUE) {
-            $this->logVisitor();
-        }
-    }
-
-    private function logVisitor()
-    {
-        if ($this->trackSession() === TRUE) {
-            // update the visitor log in the database, based on the current visitor
-            $temp_visitor_id = $this->CI->session->userdata('visitor_id');
-            $no_of_visits = ($this->CI->session->userdata('visits_count')) ? $this->CI->session->userdata('visits_count') : 1;
-            $visitor_id = isset($temp_visitor_id) ? $temp_visitor_id : 0;
-            $current_page = current_url();
-            $temp_current_page = $this->CI->session->userdata('current_page');
-
-            if (isset($temp_current_page) && $temp_current_page != $current_page) {
-                $page_name = $this->CI->router->fetch_class() . '/' . $this->CI->router->fetch_method();
-                $page_length = strlen(trim($this->CI->router->fetch_class() . '/' . $this->CI->router->fetch_method()));
-                $query_params = trim(substr($this->CI->uri->uri_string(), $page_length + 1));
-                $query_string = strlen($query_params) ? $query_params : '';
-
-                $data = array(
-                    'no_of_visits' => $no_of_visits,
-                    'ip_address' => $this->CI->input->server('REMOTE_ADDR'),
-                    'requested_url' => $this->CI->input->server('REQUEST_URI'),
-                    'referer_page' => $this->CI->agent->referrer(),
-                    'user_agent' => $this->CI->agent->agent_string(),
-                    'page_name' => $page_name,
-                    'query_string' => $query_string
+        if ($page_name && $proceed) {
+            $ip_address = $this->CI->input->ip_address();
+            $check_visitor = $this->CI->input->cookie(urldecode($page_name), FALSE);
+            if (!isset($check_visitor)) {
+                $cookie = array(
+                    'name'   => urldecode($page_name),
+                    'value'  => $ip_address,
+                    'expire' => 7200,
+                    'secure' => false
                 );
-
-                $this->CI->db->insert($this->table_visitor, $data);
-                $this->CI->session->set_userdata('current_page', $current_page);
-            }
-        } 
-        else {
-            $page_name = $this->CI->router->fetch_class() . '/' . $this->CI->router->fetch_method();
-            $page_length = strlen(trim($this->CI->router->fetch_class() . '/' . $this->CI->router->fetch_method()));
-            $query_params = trim(substr($this->CI->uri->uri_string(), $page_length + 1));
-            $query_string = strlen($query_params) ? $query_params : '';
-
-            $data = array(
-                'ip_address' => $this->CI->input->server('REMOTE_ADDR'),
-                'requested_url' => $this->CI->input->server('REQUEST_URI'),
-                'referer_page' => $this->CI->agent->referrer(),
-                'user_agent' => $this->CI->agent->agent_string(),
-                'page_name' => $page_name,
-                'query_string' => $query_string
-            );
-
-            $result = $this->CI->db->insert($this->table_visitor, $data);
-            if ($result === FALSE) {
-                $this->CI->session->set_userdata('track_session', FALSE);
-            } 
-            else {
-                $this->CI->session->set_userdata('track_session', TRUE);
-                $entry_id = $this->CI->db->insert_id();
-                $query = $this->CI->db->query('SELECT MAX(no_of_visits) AS next FROM ' . $this->table_visitor . ' LIMIT 1');
-                $count = 0;
-
-                if ($query->num_rows() == 1) {
-                    $row = $query->row();
-                    if ($row->next == NULL || $row->next == 0) $count = 1;
-                    else $count++;
-                }
-
-                $this->CI->db->where('id', $entry_id);
-                $data = array('no_of_visits' => $count);
-                $this->CI->db->update($this->table_visitor, $data);
-
-                $current_page = current_url();
-                $this->CI->session->set_userdata('visits_count', $count);
-                $this->CI->session->set_userdata('current_page', $current_page);
+                $this->CI->input->set_cookie($cookie);
+                $this->saveVisitor($page_name);
             }
         }
 
         $this->totalVisitors();
+    }
+
+    private function saveVisitor($page_name)
+    {
+        if ($page_name) {
+            $page_length = strlen(trim($this->CI->router->fetch_class() . '/' . $this->CI->router->fetch_method()));
+            $query_params = trim(substr($this->CI->uri->uri_string(), $page_length + 1));
+            $query_string = strlen($query_params) ? $query_params : '';
+
+            $this->CI->db->select('id, no_of_visits');
+            $this->CI->db->where([
+                'ip_address' => $this->CI->input->server('REMOTE_ADDR'),
+                'user_agent' => $this->CI->agent->agent_string(),
+                'page_name' => urldecode($page_name),
+                'query_string' => $query_string
+            ]);
+            $this->CI->db->limit(1);
+            $query = $this->CI->db->get($this->table_visitor);
+            $check = $query->row();
+
+            if (isset($check) && $check->id) {
+                $this->CI->db->set(['no_of_visits' => $check->no_of_visits + 1]);
+                $this->CI->db->where(['id' => $check->id]);
+                $this->CI->db->update($this->table_visitor);
+            }
+            else {
+                $data = array(
+                    'no_of_visits' => 1,
+                    'ip_address' => $this->CI->input->server('REMOTE_ADDR'),
+                    'requested_url' => $this->CI->input->server('REQUEST_URI'),
+                    'referer_page' => $this->CI->agent->referrer(),
+                    'user_agent' => $this->CI->agent->agent_string(),
+                    'page_name' => urldecode($page_name),
+                    'query_string' => $query_string
+                );
+
+                $this->CI->db->insert($this->table_visitor, $data);
+            }
+        }
     }
 
     private function isBotSearch()
@@ -568,11 +550,6 @@ class AuthMiddleware {
         }
 
         return FALSE;
-    }
-
-    private function trackSession() 
-    {
-        return ($this->CI->session->userdata('track_session') === TRUE ? TRUE : FALSE);
     }
 
     private function totalVisitors()
